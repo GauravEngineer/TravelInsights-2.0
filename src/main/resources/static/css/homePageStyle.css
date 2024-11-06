@@ -1,0 +1,514 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    overflow-y: scroll; 
+  }
+  
+  html::-webkit-scrollbar {
+    display: none; 
+  }
+
+
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('../homePage_assets/assets/background2.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 100px;
+    height: 80px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li  a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 60px;
+}
+.text-box p{
+    margin: 10px 0 10px;
+    font-size: 20px;
+    color: black;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 12px 34px;
+    font-size: 13px;
+    backdrop-filter: blur(30px);
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    
+    border: 1px solid #ffcccc;
+    background: #ffcccc;
+    transition: 1s;
+}
+
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute ;
+        background: orangered;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color:black;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+/*---------  package  --------*/
+.package{
+    min-height: 100vh;
+    width: 100%;
+    
+}
+.title{
+    text-align: center;
+    
+}
+.title h2{
+    font-size: 30px;
+    line-height: 1.2;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.package-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    margin-top: 3rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.thum{
+    position: relative;
+    transition: all .3s cubic-bezier(cubic-bezier(0.445, 0.05, 0.55, 0.95));
+    will-change: filter;
+    cursor: pointer;
+}
+.thum img{
+    width:100%;
+    height: auto;
+}
+.destination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.destination h4{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.destination h3{
+    text-align: right;
+    margin-bottom: 8px;
+}
+.dest-content{
+    padding-top: 5px;
+}
+.stars i{
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+.thum:hover {
+    filter: none;
+    transform: scale(1.04);
+}
+
+/*-------Contact Us page--------*/
+
+
+.contact-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Outfit', sans-serif;
+    background-color :#ffdad5;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.contact-left-title h2{
+    font-weight: 600;
+    color: black;
+    margin-bottom: 5px;
+    font-size: 50px;
+}
+
+.contact-left-title hr{
+    border: none;
+    width: 280px;
+    height: 5px;
+    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: 1px solid black;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+}
+.contact-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+.contact-inputs:focus{
+    border: 2px solid #ff994f;
+}
+.contact-inputs::placeholder{
+    color: #a9a9a9;
+}
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    gap:10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg,#ff994f,#fa6d86);
+    cursor: pointer; 
+}
+@media (max-width:800px){
+    .contact-inputs{
+        width: 80vw;
+    }
+    
+}
+/*-------login and register--------*/
+/* Profile Icon styles */
+.profile-icon svg {
+    vertical-align: middle;
+    cursor: pointer;
+    color: #000;
+    transition: transform 0.3s;
+}
+
+.profile-icon:hover svg {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Login form styles */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    width: 350px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    text-align: center;
+    color: white;
+}
+
+.login-card h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+
+/* Profile Icon styles */
+.profile-icon svg {
+    vertical-align: middle;
+    cursor: pointer;
+    color: #000;
+    transition: transform 0.3s;
+}
+
+.profile-icon:hover svg {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Login form styles */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    width: 350px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    text-align: center;
+    color: white;
+}
+
+.login-card h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.input-field {
+    position: relative;
+    border-bottom: 2px solid #ccc;
+    margin: 15px 0;
+  }
+  
+  .input-field label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.15s ease;
+  }
+  
+  .input-field input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .input-field input:focus~label,
+  .input-field input:valid~label {
+    font-size: 0.8rem;
+    top: 10px;
+    transform: translateY(-120%);
+  }
+
+  button {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    margin-top: 5px;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    color: #fff;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .register {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+  }
+
+  .register_name{
+    color: #ff3c1f;
+  }
+
+
+  /* Footer Section */
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.logo-img{
+    width:150px;
+    height: 120px;
+}
+
+.footer-links h3, .footer-contact h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-links ul li a:hover {
+    color: #ff4b2b;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #ccc;
+}
