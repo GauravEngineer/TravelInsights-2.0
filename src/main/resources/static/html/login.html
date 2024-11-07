@@ -5,59 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Travel Insights</title>
 <style>
-/* Header Section */
+/* Header Styles */
 header {
-    background-color: #333;
-    padding: 20px 0;
-    color: white;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-.container {
-    width: 90%;
-    margin: 0 auto;
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
 }
-
-.logo img {
-    max-width: 100px; /* Adjust the size based on your needs */
-    height: auto;
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #333;
 }
-
-
-nav ul {
+.navbar .logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+.navbar .nav-links {
     list-style: none;
     display: flex;
+    gap: 20px;
 }
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: white;
+.navbar .nav-links li a {
     text-decoration: none;
-    font-size: 18px;
-    padding: 8px 16px;
-    transition: background-color 0.3s ease;
+    color: #333;
+    font-weight: 500;
 }
-
-nav ul li a:hover {
-    background-color: #555;
-    border-radius: 5px;
-}
-
-/* Get Quote Button */
-.quote-btn {
-    background-color: #ff4b2b;
-    padding: 8px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.quote-btn:hover {
-    background-color: #ff3c1f;
+.navbar .profile-icon a {
+    color: #333;
+    font-size: 1.2em;
 }
 
 /* Profile Icon styles */
@@ -189,11 +174,11 @@ body {
 
 /* Footer Section */
 footer {
+    width: 100%;
     background-color: #333;
     color: white;
     padding: 40px 20px;
 }
-
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -202,76 +187,70 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
 }
-
-.footer-logo h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.footer-logo .logo-img {
+    width: 150px;
+    height: 120px;
 }
-
 .footer-logo p {
     font-size: 14px;
     color: #ccc;
 }
-
 .footer-links h3, .footer-contact h3 {
     font-size: 18px;
     margin-bottom: 10px;
 }
-
 .footer-links ul {
     list-style: none;
 }
-
 .footer-links ul li {
     margin-bottom: 10px;
 }
-
 .footer-links ul li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
 }
-
 .footer-links ul li a:hover {
     color: #ff4b2b;
 }
-
 .footer-contact p {
     font-size: 14px;
     margin-bottom: 10px;
 }
-
 .footer-bottom {
     text-align: center;
     margin-top: 20px;
     border-top: 1px solid #555;
     padding-top: 10px;
 }
-
 .footer-bottom p {
     font-size: 14px;
     color: #ccc;
 }
+
 </style>
 </head>
 <body>
 
        <!-- Header Section -->
        <header>
-        <div class="container">
-            <div class="logo">
-                <img src="https://res.cloudinary.com/dhbkscly1/image/upload/v1730903506/project_logo_ojj7et.png" alt="Travel Insights Logo">
-            </div> 
-            <nav>
-                <ul>
-                    <li><a href="../static/html/Home.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Our Services</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="contact.html" class="quote-btn">Get Quote</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="https://res.cloudinary.com/dhbkscly1/image/upload/v1730903506/project_logo_ojj7et.png" alt="Travel Insight Logo">
+                <span>Travel Insight</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="homePage.htm">Home</a></li>
+                <li><a href="#package">Top Packages</a></li>
+                <li><a href="AllPackages.html">Our Package</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#contact-container">Contact Us</a></li>
+                
+            </ul>
+            <div class="profile-icon">
+                <a href="#"><i class="fas fa-user"></i></a>
+            </div>
+        </nav>
     </header>
 
     <!-- Login Form Section -->
@@ -295,39 +274,38 @@ footer {
         </div>
     </div>
 
-      <!-- Footer Section -->
-    <footer>
-        <div class="footer-container">
-            <!-- Logo and Description -->
-            <div class="footer-logo">
-                <div class="logo">
-                    <img src="https://res.cloudinary.com/dhbkscly1/image/upload/v1730903506/project_logo_ojj7et.png" alt="Service Ahead Logo">
-                </div>  <br>
-                <p>Service Ahead offers hassle-free car service <br> by picking up your vehicle from home, <br>servicing it, and returning it back.<br> Our process is tailored for your convenience.</p>
-            </div>
-            <!-- Important Links -->
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="/html/home.html">Home</a></li>
-                    <li><a href="/html/about.html">About Us</a></li>
-                    <li><a href="/html/services.html">Our Services</a></li>
-                    <li><a href="/html/contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <!-- Contact Info -->
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <p><strong>Phone:</strong> +123-456-7890</p>
-                <p><strong>Email:</strong> info@serviceahead.com</p>
-                <p><strong>Address:</strong> 123 Main Street, City, Country</p>
-            </div>
+    <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Logo and Description -->
+        <div class="footer-logo">
+            <img src="https://res.cloudinary.com/dhbkscly1/image/upload/v1730903506/project_logo_ojj7et.png" alt="Travel Insight Logo" class="logo-img">
+            <p>Travel Insight is your go-to platform for exploring top tourist destinations around the world.</p>
         </div>
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <p>&copy; 2024 Travel-Insights. All Rights Reserved.</p>
+        <!-- Important Links -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="homePage.htm">Home</a></li>
+                <li><a href="#package">Top Packages</a></li>
+                <li><a href="AllPackages.html">Our Package</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#contact-container">Contact Us</a></li>
+            </ul>
         </div>
-    </footer>
+        <!-- Contact Info -->
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><strong>Phone:</strong> +123-456-7890</p>
+            <p><strong>Email:</strong> info@travelinsight.com</p>
+            <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+        </div>
+    </div>
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Travel Insight. All Rights Reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>
